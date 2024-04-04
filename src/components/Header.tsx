@@ -1,14 +1,15 @@
-import svg from "../assets/nl2-unite-icon.svg"
+import svg from "../assets/nl2-unite-icon.svg";
+import { NavLink } from "./nav-link";
 
-export function Header(){
+export function Header() {
     return (
         <div className="flex items-center gap-5 py-2">
-          <img src={svg}/>
+            <img src={svg} />
 
-          <nav className="flex items-center gap-5">
-            <a href="" className="font-medium text-sm text-zinc-300">Eventos</a>
-            <a href="" className="font-medium text-sm">Participantes</a>
-          </nav>
+            <nav className="flex items-center gap-5">
+                <NavLink href="/eventos">Eventos</NavLink>
+                <NavLink href="/participantes">Participantes</NavLink>
+            </nav>
         </div>
-    )
+    );
 }
